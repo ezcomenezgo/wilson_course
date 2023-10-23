@@ -13,5 +13,7 @@ public class OopPractice {
         // Execute Scanner class's constructor
         // Then can use the methods in Scanner class like s.nextDouble()
         Scanner s = new Scanner(System.in);
+        circle1.setLength(100);
+        System.out.println(circle1.getLength());
     }
 }

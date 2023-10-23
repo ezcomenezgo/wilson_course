@@ -1,9 +1,26 @@
 public class Circle {
+    // getter and setter
+    public double getLength() {
+        return length;
+    }
+
+    public void setLength(int length) {
+        if (length < 0) {
+            System.out.println("It's not a valid value");
+        } else if (length > 1000) {
+            System.out.println("It's not meet the requirement");
+        } else {
+            this.length = length;
+        }
+    }
+
     // Declare attribute of Circle
     // use 'public' make it can be used everywhere
     // use 'private' make it only be used in this class, normally will do this action
     // the variable declared above constructor called Fields
     private double radius;
+    // Encapsulate
+    private int length;
     // use 'static' can avoid occupy memory space when declare many Circle objects
     // And it belongs to class
     private static final double PI = 3.14;
