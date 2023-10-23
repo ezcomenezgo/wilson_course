@@ -4,6 +4,17 @@
 import java.util.Scanner;
 
 public class Main {
+    public static int changeNum(int x) {
+        return x = 30;
+    }
+
+    public static void printHi(int i) {
+        if (i == 0) return;
+        System.out.println("enter " + i);
+        printHi(i - 1);
+        System.out.println("finish " + i);
+    }
+
     public static void main(String[] args) {
         // Press Opt+Enter with your caret at the highlighted text to see how
         // IntelliJ IDEA suggests fixing it.
@@ -61,5 +72,22 @@ public class Main {
             System.out.println("i = " + i);
             i++;
         }
+
+        // primitive type will copy by value
+        int a = 10;
+        changeNum(a);
+        System.out.println(a);
+
+        // non-primitive value will copy by reference
+        // even in function when an object to be a params, Java will do the same copy by reference thing
+        int[] arr1 = {10, 20, 30};
+        int[] arr2 = arr1;
+        arr2[0] = 100;
+        for (int j = 0; j < arr1.length; j++) {
+            System.out.println("arr1: " + arr1[j]);
+        }
+
+        // recursive function
+        printHi(10);
     }
 }
