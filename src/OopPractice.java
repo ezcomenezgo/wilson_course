@@ -13,7 +13,20 @@ public class OopPractice {
         // Execute Scanner class's constructor
         // Then can use the methods in Scanner class like s.nextDouble()
         Scanner s = new Scanner(System.in);
+
+        // Encapsulate
         circle1.setLength(100);
         System.out.println(circle1.getLength());
+
+        // Inheritance
+        Teacher teacher1 = new Teacher(30, "abc", "test", "CS");
+        teacher1.teach();
+        // use @Override
+        teacher1.walk();
+        Student student1 = new Student(20, "abc", "test");
+        // do not use @Override
+        student1.learn();
+
+
     }
 }
