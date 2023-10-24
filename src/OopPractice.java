@@ -23,10 +23,24 @@ public class OopPractice {
         teacher1.teach();
         // use @Override
         teacher1.walk();
-        Student student1 = new Student(20, "abc", "test");
+        Student student1 = new Student(20, "abc", "test", 90);
         // do not use @Override
         student1.learn();
 
+        // Polymorphism
+        People teacher3 = new Teacher(40, "ccn", "test", "Music");
+        People[] people = new People[3];
+        people[0] = teacher1;
+        people[1] = teacher3;
+        people[2] = student1;
+        for (People person : people) {
+            System.out.println(person.address);
+        }
 
+        // Abstract class
+        Dog dog = new Dog();
+        Animal cat = new Cat();
+        dog.makeSound();
+        cat.makeSound();
     }
 }
