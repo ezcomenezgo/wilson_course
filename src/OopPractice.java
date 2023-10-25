@@ -42,5 +42,9 @@ public class OopPractice {
         Animal cat = new Cat();
         dog.makeSound();
         cat.makeSound();
+
+        // Interface
+        Edible chicken = new Chicken();
+        System.out.println(chicken.howToEat());
     }
 }
