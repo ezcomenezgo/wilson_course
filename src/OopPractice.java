@@ -46,5 +46,8 @@ public class OopPractice {
         // Interface
         Edible chicken = new Chicken();
         System.out.println(chicken.howToEat());
+
+        System.out.println(dog.toString());
+        System.out.println(cat.toString());
     }
 }
