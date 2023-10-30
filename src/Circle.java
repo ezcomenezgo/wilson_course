@@ -36,8 +36,13 @@ public class Circle {
     // it won't return any value
     // it will do a new object
     public Circle(double radius) {
-        // 'this' means the class itself
-        this.radius = radius;
+        // throw
+        if (radius < 0) {
+            throw new IllegalArgumentException("Radius cannot be negative");
+        } else {
+            // 'this' means the class itself
+            this.radius = radius;
+        }
         // variable declared in the methods called local variables
         int x = 3;
     }

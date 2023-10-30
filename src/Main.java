@@ -1,6 +1,7 @@
 // Press Shift twice to open the Search Everywhere dialog and type `show whitespaces`,
 // then press Enter. You can now see whitespace characters in your code.
 
+import javax.swing.*;
 import java.util.Scanner;
 
 public class Main {
@@ -89,5 +90,20 @@ public class Main {
 
         // recursive function
         printHi(10);
+
+        // try...catch
+        int age;
+        String ageString = JOptionPane.showInputDialog("What's your age?");
+        try {
+            // put codes might happen exceptions
+            age = Integer.parseInt(ageString);
+            if (age > 18) {
+                System.out.println("You can drive");
+            } else if (age < 18) {
+                System.out.println("You can't drive");
+            }
+        } catch (NumberFormatException e) {
+            System.out.println("Invalid input");
+        }
     }
 }
